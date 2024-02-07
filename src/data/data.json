@@ -1,0 +1,14 @@
+{
+    "Projects" : [
+        {
+            "projectimg" : "https://thenfapost.com/wp-content/uploads/2021/03/netflix.jpg",
+            "projectname" : "Netflix clone",
+            "toolsused" : "Next.js, React Hook, Tailwind CSS"
+        },
+        {
+            "projectimg" : "https://cdn.mos.cms.futurecdn.net/my8AUCgUhKERqBBwdPQuXG-1200-80.jpg",
+            "projectname" : "Discord clone",
+            "toolsused" : "Next.js, React Hook, Tailwind CSS"
+        }
+    ]
+}
