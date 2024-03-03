@@ -1,14 +1,27 @@
-{
-    "Projects" : [
-        {
-            "projectimg" : "https://thenfapost.com/wp-content/uploads/2021/03/netflix.jpg",
-            "projectname" : "Netflix clone",
-            "toolsused" : "Next.js, React Hook, Tailwind CSS"
-        },
-        {
-            "projectimg" : "https://cdn.mos.cms.futurecdn.net/my8AUCgUhKERqBBwdPQuXG-1200-80.jpg",
-            "projectname" : "Discord clone",
-            "toolsused" : "Next.js, React Hook, Tailwind CSS"
-        }
-    ]
-}
+[
+    {
+        "id": 1,
+        "site-title": "linkedin",
+        "url": "https://www.linkedin.com/in/chandanp007/"
+    },
+    {
+        "id": 2,
+        "site-title": "twitter",
+        "url": "https://twitter.com/cp_twts"
+    },
+    {
+        "id": 3,
+        "site-title": "stackoverflow",
+        "url": "https://stackoverflow.com/users/20415138/chandan-pandey"
+    },
+    {
+        "id": 4,
+        "site-title": "slack",
+        "url": "https://stackoverflow.com/users/20415138/chandan-pandey"
+    },
+    {
+        "id": 5,
+        "site-title": "github",
+        "url": "https://github.com/ChandanP007/"
+    }
+]

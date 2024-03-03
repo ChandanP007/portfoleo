@@ -2,6 +2,8 @@ import { useEffect, useState, Suspense} from 'react';
 import Card from './Card'
 import Loading from './Loading';
 
+import MoreProjects from './MoreProjects';
+
 
 export default function Skills(){    
 
@@ -19,15 +21,23 @@ export default function Skills(){
     return(
         <>
         <div className="p-5">
+
+            <div className='flex gap-10 items-center justify-between'>
+
+            <div>
             <h1 className="text-white text-xl font-semibold pb-5">What I know</h1>
-            <div className="skillCards flex gap-5 ">
-        
-                <Card title="Frontend" skills={skills.map((skill)=>skill.frontend)}/>
-                <Card title="Backend" skills={skills.map((skill)=>skill.backend)} />
-                <Card title="DevOps" skills={skills.map((skill)=>skill.databases)} />
-    
+                <div className="skillCards flex gap-5 flex-wrap">
+                    <Card title="Frontend" skills={skills.map((skill)=>skill.frontend)}/>
+                    <Card title="Backend" skills={skills.map((skill)=>skill.backend)} />
+                    <Card title="Database" skills={skills.map((skill)=>skill.databases)} />
+                </div>
             </div>
+
+            <MoreProjects/>
+            </div>     
         </div>
+
+
         </>
     )
 }

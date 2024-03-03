@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
 
+
+
 //Components
 import Nav from "@/components/Nav";
 import SideMenu from "@/components/SideMenu";
@@ -10,9 +12,9 @@ export default function Home() {
   return (
     <>
       <Nav/>
-      <div className="main-container flex">
+      <div className="main-container flex ">
         <SideMenu/>
-        <Main/>
+         <Main/>
       </div>
     </>
   );

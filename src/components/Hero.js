@@ -1,11 +1,31 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
 
 //assets
 import myImg from '../../public/myImg.png'
+import { useEffect, useState } from "react";
 
 export default function Hero(){
+    
+    const [username, setUsername] = useState('');
+    const [userhandle, setUserHandle] = useState('');
 
+    useEffect(()=>{
+        var profileApi = "https://script.googleusercontent.com/macros/echo?user_content_key=L-cRoLazPX9qRdysHLrYn8IwgbpMyfbhXyDghdeS3kc7IMQ1bUp1QFj6auDXVbvt7ndm3ZaTC5tJbaZk1e198Ks_xFp8XwLbm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnO9ZvAAn3ShQPvR2X4OUHogvipHnByb1R-_uXhbNJJ_4gVMLAXB4rbJid3CweHm-DKvpORXU0681EXu3kQt1nxMfxxMg--JwxQ&lib=M8QvURP4d2RUdhnzqeWthMXBMBDukkyC4"
+        fetch(profileApi)
+        .then((response)=>response.json())
+        .then((response)=>{
+            setUsername(response.data[1]["developer-name"])
+            setUserHandle(response.data[1]["user-handle"])
+        }
+        )
+    },[])
+        
+    const user = (
+        <div>
+        <h1 className="text-3xl font-bold">{username}</h1>
+        <h6 className="font-thin text-sm">{userhandle}</h6>
+        </div> 
+    )
     
     return(
         <>
@@ -22,10 +42,7 @@ export default function Hero(){
                         className="object-cover"
                         alt='developer-image'
                     />
-                    <div>
-                        <h1 className="text-3xl font-bold">Chandan Pandey</h1>
-                        <h6 className="font-thin text-sm">@chDevs</h6>
-                    </div>
+                    {user}
                 </div>
                 <h3 className="bg-black/30 
                 p-1.5 text-sm font-thin px-5 rounded-2xl

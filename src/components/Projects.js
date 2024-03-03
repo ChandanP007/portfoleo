@@ -1,6 +1,7 @@
-import {React, useEffect, useState} from 'react';
 
+import {React, useEffect, useState} from 'react';
 import Image from 'next/image'
+
 
 export default function Projects(){
     
@@ -18,25 +19,26 @@ export default function Projects(){
 
     let allProjects = myProjects.map((project,index)=>{
         return (
-            <div className='text-black bg-white/70 rounded-md cursor-pointer opacity-70 transition hover:opacity-100'>
-                <Image src={project["project-thumbnail"]} width="400" height="100"/>
+            <div className='text-black  bg-white/70 rounded-md cursor-pointer opacity-70 transition hover:opacity-100'>
+                <Image src={project["project-thumbnail"]} width="350" height="100"/>
                 <h2 className='text-xl font-semibold px-5 py-2 text-left'>{project["project-name"]}</h2>
-                <p className="text-sm px-5 py-2">{project["tech-stack"]}</p>
+                <p className="text-sm px-5 py-2 text-ellipsis">{project["tech-stack"]}</p>
              </div>
         )
     }).slice(1,myProjects.length);
     
     
     return(
+        <>
         <div className="p-5">
-            <h1 className="text-white text-xl font-semibold">Projects</h1>
-            
-            <div className="projects flex justify-start gap-10 items-center py-5">
-                <div className='project flex gap-10 p-5'>
+            <h1 className="text-white text-xl font-semibold">Projects</h1>  
+            <div className="">
+                <div className='flex py-10 gap-10 flex-wrap '>
                     {allProjects}
-                </div>
+                </div>      
             </div>
         </div>
+        </>
     )
 
 }
